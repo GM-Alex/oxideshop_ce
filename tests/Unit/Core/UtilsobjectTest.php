@@ -127,7 +127,7 @@ class UtilsobjectTest extends \OxidTestCase
     {
         $oArticle = oxNew('oxarticle', array('aaa' => 'bbb'));
 
-        $this->assertTrue($oArticle instanceof oxarticle);
+        $this->assertTrue($oArticle instanceof \OxidEsales\EshopCommunity\Application\Model\Article);
         $this->assertTrue(isset($oArticle->aaa));
         $this->assertEquals('bbb', $oArticle->aaa);
     }
@@ -229,7 +229,7 @@ class UtilsobjectTest extends \OxidTestCase
         $aGotInstanceCache = $oTestInstance->getClassNameCache();
 
         $this->assertEquals(1, count($aGotInstanceCache));
-        $this->assertTrue($aGotInstanceCache["oxattribute"] instanceof oxAttribute);
+        $this->assertTrue($aGotInstanceCache["oxattribute"] instanceof \OxidEsales\EshopCommunity\Application\Model\Attribute);
     }
 
     public function testResetInstanceCacheAll()
